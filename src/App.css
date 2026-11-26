@@ -1,0 +1,180 @@
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #121213;
+  color: white;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #3a3a3c;
+}
+
+.header h1 {
+  font-size: 34px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.header p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding: 30px 10px;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.word-row {
+  display: flex;
+  gap: 6px;
+}
+
+.tile {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tile.correct,
+.key.correct {
+  background: #538d4e;
+  border-color: #538d4e;
+}
+
+.tile.present,
+.key.present {
+  background: #b59f3b;
+  border-color: #b59f3b;
+}
+
+.tile.absent,
+.key.absent {
+  background: #3a3a3c;
+  border-color: #3a3a3c;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.key {
+  min-width: 32px;
+  height: 52px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 4px;
+  background: #818384;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.key:hover {
+  opacity: 0.8;
+}
+
+.wide-key {
+  min-width: 62px;
+  font-size: 11px;
+}
+
+.footer {
+  color: #777;
+  font-size: 12px;
+  margin-top: auto;
+  padding: 15px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background: #272729;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 85%;
+  max-width: 350px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal p {
+  color: #ccc;
+}
+
+.restart-button {
+  background: #538d4e;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.restart-button:hover {
+  background: #416f3d;
+}
+
+@media (max-width: 400px) {
+  .tile {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .key {
+    min-width: 27px;
+    height: 45px;
+    font-size: 12px;
+  }
+
+  .wide-key {
+    min-width: 48px;
+    font-size: 9px;
+  }
+}
